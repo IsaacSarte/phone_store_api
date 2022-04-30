@@ -13,3 +13,21 @@ use Illuminate\Support\Facades\Route;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+
+Route::get('/', function () {
+    return response()->json([
+        'data' => [
+            'message' => '🚀 API is Working from api.php'
+        ]
+    ],200);
+});
+
+Route::get('/phonestore', function () {
+    return response()->json([
+        'data' => [
+            'message' => 'Welcome to Phone Store API from api.php'
+        ]
+    ],200);
+});
+
+/* Resources */
