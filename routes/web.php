@@ -13,6 +13,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::middleware(['cors'])->group(function () {
+
+    Route::get('/', function () {
+        return response()->json([
+            'data' => [
+                'message' => '🚀 API is Working'
+            ]
+        ],200);
+    });
+
+    Route::get('/phonestore', function () {
+        return response()->json([
+            'data' => [
+                'message' => 'Welcome to Phone Store API'
+            ]
+        ],200);
+    });
+    
 });
