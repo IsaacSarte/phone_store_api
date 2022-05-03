@@ -35,7 +35,7 @@ class ProductsController extends Controller
             if($validator->fails()){
                 return response()->json([
                     'data' => [
-                        'error' => $validator->errors()
+                        'error' => 'All fields are required!'
                     ]
                 ], 422);
             }
@@ -72,7 +72,7 @@ class ProductsController extends Controller
             if($validator->fails()){
                 return response()->json([
                     'data' => [
-                        'error' => $validator->errors()
+                        'error' => 'All fields are required!'
                     ]
                 ], 422);
             }
